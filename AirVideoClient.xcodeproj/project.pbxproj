@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CB0D73B15422EF100292DC6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB0D73A15422EF100292DC6 /* Cocoa.framework */; };
+		1CB0D73D15422EF100292DC6 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB0D73C15422EF100292DC6 /* MacRuby.framework */; };
+		1CB0D74415422EF100292DC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CB0D74215422EF100292DC6 /* InfoPlist.strings */; };
+		1CB0D74615422EF100292DC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB0D74515422EF100292DC6 /* main.m */; };
+		1CB0D74B15422EF100292DC6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CB0D74915422EF100292DC6 /* MainMenu.xib */; };
+		1CB0D74E15422EF100292DC6 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1CB0D74D15422EF100292DC6 /* rb_main.rb */; };
+		1CB0D75015422EF100292DC6 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1CB0D74F15422EF100292DC6 /* AppDelegate.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CB0D73615422EF100292DC6 /* AirVideoClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVideoClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB0D73A15422EF100292DC6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1CB0D73C15422EF100292DC6 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		1CB0D74115422EF100292DC6 /* AirVideoClient-Info.plist */ = {isa = PBXFileReference; path = "AirVideoClient-Info.plist"; sourceTree = "<group>"; };
+		1CB0D74315422EF100292DC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CB0D74515422EF100292DC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CB0D74715422EF100292DC6 /* AirVideoClient-Prefix.pch */ = {isa = PBXFileReference; path = "AirVideoClient-Prefix.pch"; sourceTree = "<group>"; };
+		1CB0D74A15422EF100292DC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1CB0D74D15422EF100292DC6 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		1CB0D74F15422EF100292DC6 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CB0D73315422EF100292DC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB0D73B15422EF100292DC6 /* Cocoa.framework in Frameworks */,
+				1CB0D73D15422EF100292DC6 /* MacRuby.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CB0D72B15422EF100292DC6 = {
+			isa = PBXGroup;
+			children = (
+				1CB0D73F15422EF100292DC6 /* AirVideoClient */,
+				1CB0D73915422EF100292DC6 /* Frameworks */,
+				1CB0D73715422EF100292DC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CB0D73715422EF100292DC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CB0D73615422EF100292DC6 /* AirVideoClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CB0D73915422EF100292DC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CB0D73A15422EF100292DC6 /* Cocoa.framework */,
+				1CB0D73C15422EF100292DC6 /* MacRuby.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CB0D73F15422EF100292DC6 /* AirVideoClient */ = {
+			isa = PBXGroup;
+			children = (
+				1CB0D74F15422EF100292DC6 /* AppDelegate.rb */,
+				1CB0D74815422EF100292DC6 /* Resources */,
+				1CB0D74C15422EF100292DC6 /* Other Sources */,
+				1CB0D74015422EF100292DC6 /* Supporting Files */,
+			);
+			path = AirVideoClient;
+			sourceTree = "<group>";
+		};
+		1CB0D74015422EF100292DC6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CB0D74115422EF100292DC6 /* AirVideoClient-Info.plist */,
+				1CB0D74215422EF100292DC6 /* InfoPlist.strings */,
+				1CB0D74515422EF100292DC6 /* main.m */,
+				1CB0D74715422EF100292DC6 /* AirVideoClient-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CB0D74815422EF100292DC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1CB0D74915422EF100292DC6 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1CB0D74C15422EF100292DC6 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1CB0D74D15422EF100292DC6 /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		1CB0D73E15422EF100292DC6 /* Deployment */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--compile --embed";
+			buildConfigurationList = 1CB0D75615422EF100292DC6 /* Build configuration list for PBXLegacyTarget "Deployment" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/macruby_deploy;
+			dependencies = (
+			);
+			name = Deployment;
+			passBuildSettingsInEnvironment = 1;
+			productName = Deployment;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		1CB0D73515422EF100292DC6 /* AirVideoClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CB0D75315422EF100292DC6 /* Build configuration list for PBXNativeTarget "AirVideoClient" */;
+			buildPhases = (
+				1CB0D73215422EF100292DC6 /* Sources */,
+				1CB0D73315422EF100292DC6 /* Frameworks */,
+				1CB0D73415422EF100292DC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirVideoClient;
+			productName = AirVideoClient;
+			productReference = 1CB0D73615422EF100292DC6 /* AirVideoClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CB0D72D15422EF100292DC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1CB0D73015422EF100292DC6 /* Build configuration list for PBXProject "AirVideoClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1CB0D72B15422EF100292DC6;
+			productRefGroup = 1CB0D73715422EF100292DC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CB0D73515422EF100292DC6 /* AirVideoClient */,
+				1CB0D73E15422EF100292DC6 /* Deployment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CB0D73415422EF100292DC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB0D74415422EF100292DC6 /* InfoPlist.strings in Resources */,
+				1CB0D74B15422EF100292DC6 /* MainMenu.xib in Resources */,
+				1CB0D74E15422EF100292DC6 /* rb_main.rb in Resources */,
+				1CB0D75015422EF100292DC6 /* AppDelegate.rb in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CB0D73215422EF100292DC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CB0D74615422EF100292DC6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1CB0D74215422EF100292DC6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CB0D74315422EF100292DC6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1CB0D74915422EF100292DC6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CB0D74A15422EF100292DC6 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CB0D75115422EF100292DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1CB0D75215422EF100292DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1CB0D75415422EF100292DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirVideoClient/AirVideoClient-Prefix.pch";
+				INFOPLIST_FILE = "AirVideoClient/AirVideoClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1CB0D75515422EF100292DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirVideoClient/AirVideoClient-Prefix.pch";
+				INFOPLIST_FILE = "AirVideoClient/AirVideoClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1CB0D75715422EF100292DC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1CB0D75815422EF100292DC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CB0D73015422EF100292DC6 /* Build configuration list for PBXProject "AirVideoClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB0D75115422EF100292DC6 /* Debug */,
+				1CB0D75215422EF100292DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CB0D75315422EF100292DC6 /* Build configuration list for PBXNativeTarget "AirVideoClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB0D75415422EF100292DC6 /* Debug */,
+				1CB0D75515422EF100292DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1CB0D75615422EF100292DC6 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CB0D75715422EF100292DC6 /* Debug */,
+				1CB0D75815422EF100292DC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CB0D72D15422EF100292DC6 /* Project object */;
+}
