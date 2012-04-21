@@ -11,27 +11,45 @@ require 'airvideo'
 class MainWindowController < NSWindowController
   attr_accessor :browser
   
+  def initialize
+    @net_browser = NSNetServiceBrowser.alloc.init
+    @net_browser.delegate = self
+    @net_browser.searchForServicesOfType('_airvideoserver._tcp', inDomain:'local')
+    @servers = []
+    @cache = {}
+  end
+  
+  def awakeFromNib
+    initialize
+  end
   
   def rootItemForBrowser(browser)
-    server
+    @net_browser
   end
   
   
   def browser(browser, numberOfChildrenOfItem:item) 
-    unless cache.has_key?(item)
-      if item == server
-        cache[item] = server.ls
-        elsif item.is_a?(AirVideo::Client::FolderObject)
-        cache[item] = item.ls
-        else
-        cache[item] = []
+    if item == @net_browser
+      return @servers.size
+    elsif !@cache.has_key?(item)
+      if item.is_a?(NSNetService)
+        server = AirVideo::Client.new("#{item.name}.local",45631,'asd092')
+        @cache[item] = server.ls
+      elsif item.is_a?(AirVideo::Client::FolderObject)
+        @cache[item] = item.ls
+      else
+        @cache[item] = []
       end
     end
-    return cache[item].count
+    return @cache[item].count
   end
   
   def browser(browser, child:index, ofItem:item)
-    cache[item][index]
+    if item == @net_browser
+      @servers[index]
+    else
+      @cache[item][index]
+    end
   end
   
   def browser(browser, isLeafItem:item)
@@ -42,13 +60,10 @@ class MainWindowController < NSWindowController
     item.name
   end
   
-  private
-  
-  def server
-    @server ||= AirVideo::Client.new('PepitoMac.local',45631,'asd092')
+  def netServiceBrowser(netServiceBrowser, didFindService:netService, moreComing:moreDomainsComing)
+    @servers << netService
+    browser.loadColumnZero
+    puts netService.name
   end
   
-  def cache
-    @cache ||= {}
-  end
 end
