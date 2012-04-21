@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C604E801542448100D79B73 /* MainWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1C604E7F1542448100D79B73 /* MainWindowController.rb */; };
 		1CB0D73B15422EF100292DC6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB0D73A15422EF100292DC6 /* Cocoa.framework */; };
 		1CB0D73D15422EF100292DC6 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB0D73C15422EF100292DC6 /* MacRuby.framework */; };
 		1CB0D74415422EF100292DC6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CB0D74215422EF100292DC6 /* InfoPlist.strings */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C604E7F1542448100D79B73 /* MainWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = MainWindowController.rb; sourceTree = "<group>"; };
 		1CB0D73615422EF100292DC6 /* AirVideoClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVideoClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB0D73A15422EF100292DC6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1CB0D73C15422EF100292DC6 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = ../Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB0D74F15422EF100292DC6 /* AppDelegate.rb */,
+				1C604E7F1542448100D79B73 /* MainWindowController.rb */,
 				1CB0D74815422EF100292DC6 /* Resources */,
 				1CB0D74C15422EF100292DC6 /* Other Sources */,
 				1CB0D74015422EF100292DC6 /* Supporting Files */,
@@ -111,11 +114,12 @@
 /* Begin PBXLegacyTarget section */
 		1CB0D73E15422EF100292DC6 /* Deployment */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "--compile --embed";
+			buildArgumentsString = "--compile --embed --gem airvideo";
 			buildConfigurationList = 1CB0D75615422EF100292DC6 /* Build configuration list for PBXLegacyTarget "Deployment" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/local/bin/macruby_deploy;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = Deployment;
@@ -177,6 +181,7 @@
 				1CB0D74B15422EF100292DC6 /* MainMenu.xib in Resources */,
 				1CB0D74E15422EF100292DC6 /* rb_main.rb in Resources */,
 				1CB0D75015422EF100292DC6 /* AppDelegate.rb in Resources */,
+				1C604E801542448100D79B73 /* MainWindowController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
