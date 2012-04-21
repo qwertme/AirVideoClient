@@ -19,11 +19,11 @@
 /* Begin PBXFileReference section */
 		1CB0D73615422EF100292DC6 /* AirVideoClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVideoClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB0D73A15422EF100292DC6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		1CB0D73C15422EF100292DC6 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		1CB0D74115422EF100292DC6 /* AirVideoClient-Info.plist */ = {isa = PBXFileReference; path = "AirVideoClient-Info.plist"; sourceTree = "<group>"; };
+		1CB0D73C15422EF100292DC6 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = ../Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
+		1CB0D74115422EF100292DC6 /* AirVideoClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirVideoClient-Info.plist"; sourceTree = "<group>"; };
 		1CB0D74315422EF100292DC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1CB0D74515422EF100292DC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1CB0D74715422EF100292DC6 /* AirVideoClient-Prefix.pch */ = {isa = PBXFileReference; path = "AirVideoClient-Prefix.pch"; sourceTree = "<group>"; };
+		1CB0D74715422EF100292DC6 /* AirVideoClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirVideoClient-Prefix.pch"; sourceTree = "<group>"; };
 		1CB0D74A15422EF100292DC6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1CB0D74D15422EF100292DC6 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		1CB0D74F15422EF100292DC6 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
@@ -233,9 +233,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -253,8 +253,8 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
@@ -269,6 +269,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AirVideoClient/AirVideoClient-Prefix.pch";
 				INFOPLIST_FILE = "AirVideoClient/AirVideoClient-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -285,6 +286,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AirVideoClient/AirVideoClient-Prefix.pch";
 				INFOPLIST_FILE = "AirVideoClient/AirVideoClient-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -321,6 +323,7 @@
 				1CB0D75515422EF100292DC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CB0D75615422EF100292DC6 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -329,6 +332,7 @@
 				1CB0D75815422EF100292DC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
