@@ -15,7 +15,8 @@ class MainWindowController < NSWindowController
   attr_accessor :server_password
   attr_accessor :video_box
   attr_accessor :video_name
-  attr_accessor :video_link
+  attr_accessor :video_url
+  attr_accessor :video_live_url
   
   def initialize
     @net_browser = NSNetServiceBrowser.alloc.init
@@ -33,6 +34,8 @@ class MainWindowController < NSWindowController
   
   def connectToServer(sender)
     @connection_cache[server_name.stringValue] = AirVideo::Client.new("#{server_name.stringValue}.local", 45631, server_password.stringValue)
+    @connection_cache[server_name.stringValue].max_width = 2048
+    @connection_cache[server_name.stringValue].max_height = 2048
     server_box.hidden = true
     browser.loadColumnZero
   end
@@ -41,20 +44,21 @@ class MainWindowController < NSWindowController
     item = browser.itemAtIndexPath(browser.selectionIndexPath)
 
     if item.is_a?(NSNetService) && !@connection_cache.has_key?(item.name)
-      server_box.hidden = false
-      server_name.stringValue = item.name
+      showServerInfo(item)
     elsif item.is_a?(AirVideo::Client::VideoObject)
-      video_box.hidden = false
-      video_name.stringValue = item.name
-      video_link.stringValue = item.url
+      showVideoInfo(item)
     else
       server_box.hidden = true
       video_box.hidden = true
     end
   end
   
-  def openInQuickTime(sender)
-    `open -a "QuickTime Player" #{video_link.stringValue}`
+  def openURLInQuickTime(sender)
+    `open -a "QuickTime Player" #{video_url.stringValue}`
+  end
+  
+  def openLiveURLInQuickTime(sender)
+    `open -a "QuickTime Player" #{video_live_url.stringValue}`
   end
   
   def rootItemForBrowser(browser)
@@ -96,4 +100,19 @@ class MainWindowController < NSWindowController
     browser.loadColumnZero
   end
   
+  private
+  def showVideoInfo(video)
+    video_name.stringValue = ''
+    video_url.stringValue = ''
+    video_live_url.stringValue = ''
+    video_box.hidden = false
+    video_name.stringValue = video.name
+    video_url.stringValue = video.url
+    video_live_url.stringValue = video.live_url
+  end
+  
+  def showServerInfo(server)
+    server_box.hidden = false
+    server_name.stringValue = server.name
+  end
 end
