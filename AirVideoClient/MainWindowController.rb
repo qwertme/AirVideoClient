@@ -37,7 +37,9 @@ class MainWindowController < NSWindowController
     @connection_cache[server_name.stringValue].max_width = 2048
     @connection_cache[server_name.stringValue].max_height = 2048
     server_box.hidden = true
+    selection_index_path = browser.selectionIndexPath
     browser.loadColumnZero
+    browser.selectionIndexPath = selection_index_path
   end
   
   def browserClicked(sender)
